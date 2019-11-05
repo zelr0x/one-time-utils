@@ -1,0 +1,44 @@
+#======================================================================
+# This is an example configuration.
+# Do not edit commented part - use it as a reference!
+#
+# All data including UUIDs is fake. UUIDs were generated with postgres'
+# SELECT md5(random()::text || clock_timestamp()::text)::uuid
+#
+#======================================================================
+#[database]
+#dbms = 'mssql+pyodbc'
+#address = '127.0.0.1:5432'
+#db = 'MyDb'
+#user = 'admin'
+#
+#[query]
+#table = 'users'
+#attr_column = 'unique_user_property'
+#columns = ['first_name', 'last_name', 'unique_user_property']
+#exclude = [
+#    '3c705a6b-1d28-4ca7-ff50-e3c87b594859',
+#    '718737d2-35b0-b150-3059-6774c57b9570'
+#]
+#exclude_by = 'id'
+#remove_prefix = 'A_'
+#remove_suffix = ''
+#======================================================================
+
+[database]
+dbms = 'postgres'
+address = '127.0.0.1:5432'
+db = 'test_db'
+user = 'postgres'
+
+[query]
+table = 'users'
+attr_column = 'unique_user_property'
+columns = ['first_name', 'last_name', 'unique_user_property']
+exclude = [
+    '3c705a6b-1d28-4ca7-ff50-e3c87b594859',
+    '718737d2-35b0-b150-3059-6774c57b9570'
+]
+exclude_by = 'id'
+remove_prefix = 'A_'
+remove_suffix = ''
